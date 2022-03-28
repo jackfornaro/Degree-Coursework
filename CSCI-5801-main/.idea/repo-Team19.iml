@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="CheckStyle-IDEA-Module">
+    <option name="configuration">
+      <map />
+    </option>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Project1/testing/test-resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Project2/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Project2/src/test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/docs" />
+      <excludeFolder url="file://$MODULE_DIR$/Project1/audits" />
+      <excludeFolder url="file://$MODULE_DIR$/Project1/reports" />
+      <excludeFolder url="file://$MODULE_DIR$/Project1/documentation" />
+      <excludeFolder url="file://$MODULE_DIR$/Project1/testing" />
+      <excludeFolder url="file://$MODULE_DIR$/SDD" />
+      <excludeFolder url="file://$MODULE_DIR$/SRS" />
+      <excludeFolder url="file://$MODULE_DIR$/Project2/audits" />
+      <excludeFolder url="file://$MODULE_DIR$/Project2/documentation" />
+      <excludeFolder url="file://$MODULE_DIR$/Project1/misc" />
+      <excludeFolder url="file://$MODULE_DIR$/Project2/misc" />
+      <excludeFolder url="file://$MODULE_DIR$/Project2/reports" />
+      <excludeFolder url="file://$MODULE_DIR$/Project1/src" />
+      <excludeFolder url="file://$MODULE_DIR$/Project2/product_backlogs" />
+      <excludeFolder url="file://$MODULE_DIR$/Project2/sprint_backlogs" />
+      <excludeFolder url="file://$MODULE_DIR$/Project2/testing/test-logs" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="org.junit.jupiter:junit-jupiter:5.7.0" level="project" />
+  </component>
+</module>

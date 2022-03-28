@@ -1,0 +1,52 @@
+\hypertarget{classEntityFactory}{}\doxysection{Entity\+Factory Class Reference}
+\label{classEntityFactory}\index{EntityFactory@{EntityFactory}}
+
+
+The main class for the generation of entities.  
+
+
+
+
+{\ttfamily \#include $<$Entity\+Factory.\+h$>$}
+
+
+
+Collaboration diagram for Entity\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{classEntityFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{classEntityFactory_ad81eb0cc45fd5a3b9c94568efa07dc45}{Generate}} (int)
+\begin{DoxyCompactList}\small\item\em Generation of an entity with a randomized name and random location within bounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the generation of entities. 
+
+Calls to \mbox{\hyperlink{classEntityFactory_ad81eb0cc45fd5a3b9c94568efa07dc45}{Generate}} function to get a new instance of an entity. This is a static call, not requiring an instance to invoke the method. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntityFactory_ad81eb0cc45fd5a3b9c94568efa07dc45}\label{classEntityFactory_ad81eb0cc45fd5a3b9c94568efa07dc45}} 
+\index{EntityFactory@{EntityFactory}!Generate@{Generate}}
+\index{Generate@{Generate}!EntityFactory@{EntityFactory}}
+\doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classEntity}{Entity}} $\ast$ $>$ Entity\+Factory\+::\+Generate (\begin{DoxyParamCaption}\item[{int}]{amount = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generation of an entity with a randomized name and random location within bounds. 
+
+\begin{DoxyReturn}{Returns}
+Entities vector of size int where each \mbox{\hyperlink{classEntity}{Entity}} is some random name at some random location. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/forna032/3081\+\_\+f21/repo-\/forna032/labs/lab05\+\_\+doxygen/src/\mbox{\hyperlink{EntityFactory_8h}{Entity\+Factory.\+h}}\item 
+/home/forna032/3081\+\_\+f21/repo-\/forna032/labs/lab05\+\_\+doxygen/src/Entity\+Factory.\+cc\end{DoxyCompactItemize}

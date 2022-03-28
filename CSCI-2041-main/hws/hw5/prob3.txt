@@ -1,0 +1,40 @@
+let rec rev lst1 lst2 =
+  match lst1 with
+  | [] -> lst2
+  | (h :: t) -> rev t (h :: lst2);;
+
+let reverse lst = rev lst [];;
+
+To be proved:
+  For all lists l, (reverse l) evaluates to l^R
+
+Solution to Part a
+------------------
+
+reverse l = rev l [];;
+
+Therefore, for all lists l, (rev l []) evaluates to l^R
+
+Solution to Part b
+------------------
+
+Base Case: P([]) holds
+LHS:
+  rev [] [] = []
+RHS:
+  []^R = []
+LHS = RHS, so P([]) holds
+
+Inductive Step: P(l') holds, shows P(x :: l') holds
+LHS:
+  rev (x :: l') [] = l' :: x
+RHS:
+  (x :: l')^R = l' :: x
+LHS = RHS, so P(x :: l') holds
+
+Solution to Part c
+------------------
+
+For all lists l, (reverse l) evaluates to l^R
+
+reverse l = rev l [], therefore, (reverse l) evaluates to l^R

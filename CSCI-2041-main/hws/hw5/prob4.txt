@@ -1,0 +1,43 @@
+Solution to Problem 4
+=====================
+
+let rec rev lst1 lst2 =
+   match lst1 with
+   | [] -> lst2
+   | (h :: t) -> rev t (h :: lst2)
+
+let reverse lst = in rev lst []
+
+let rec length lst =
+  match lst with
+  | [] -> =
+  | (h :: t) -> (length t) + 1
+
+Solution to Part (a)
+====================
+for all lists l, (length (rev l [])) = (length l)
+
+Solution to Part (b)
+====================
+Base Case: (P([]) holds)
+LHS:
+  (length (rev [] [])) = length [] = 0
+RHS:
+  (length []) = 0
+LHS = RHS, so P([]) holds
+
+Inductive Step: (P(l) holds, show P(x :: l') holds)
+LHS:
+  (length (rev (x :: l') [])) = length (l' :: x) = length l' + 1
+RHS:
+  (length (x :: l')) = length l' + 1
+LHS = RHS, so P(x :: l') holds
+Hence, P(x :: l') holds by mathematical induciton
+
+Solution to Part (c)
+====================
+The property for reverse and length to be proved:
+  for all lists l, (length (reverse l)) = (length l)
+
+rev l [] = reverse l, therefore, for all lists l,
+                                    (length (reverse l)) = (length l)

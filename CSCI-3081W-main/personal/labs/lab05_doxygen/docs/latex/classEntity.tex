@@ -1,0 +1,191 @@
+\hypertarget{classEntity}{}\doxysection{Entity Class Reference}
+\label{classEntity}\index{Entity@{Entity}}
+
+
+The main class for the generation of a entity.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+
+
+Collaboration diagram for Entity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classEntity__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntity_a980f368aa07ce358583982821533a54a}{Entity}} ()
+\begin{DoxyCompactList}\small\item\em Instantiation of an entity with no position or velocity or name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntity_a2a5e58b95ade525ca57d792b8e32ef7f}{Entity}} (std\+::vector$<$ double $>$position, std\+::vector$<$ double $>$velocity, std\+::string name=\char`\"{}Unknown \mbox{\hyperlink{classEntity}{Entity}}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Instantiation of an entity with a position, velocity and name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{$\sim$\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntity}{Entity}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntity_af4bdc01282300dffac86cae3d49d9e81}{update}} (double dt)
+\begin{DoxyCompactList}\small\item\em Updating the entity\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntity_ae0534aee3b921618f0f71143706387a6}{report}} ()
+\begin{DoxyCompactList}\small\item\em Prints a general report on the entity. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classEntity_a0de25bd3b1319c746127bcc06a5bd9f4}{get\+Life\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Gets the lifetime of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntity_a81b8c89e51b696e541643e8a63395178}{set\+Position}} (std\+::vector$<$ double $>$ position)
+\begin{DoxyCompactList}\small\item\em Sets the position of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntity_afe92930d4e8ea8d591ecc55943247175}{set\+Velocity}} (std\+::vector$<$ double $>$ velocity)
+\begin{DoxyCompactList}\small\item\em Sets the velocity of the entity. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEntity_a403f69eb888da7c5a690b79c658cdf47}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the entity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEntity_a8c0279c56eee0a37bc905c79c5d15cfd}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Gets the id of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classEntity_a266591b5b25a3b297ee441f268338bf7}{get\+Entity\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the count of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the generation of a entity. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEntity_a980f368aa07ce358583982821533a54a}\label{classEntity_a980f368aa07ce358583982821533a54a}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Instantiation of an entity with no position or velocity or name. 
+
+\mbox{\Hypertarget{classEntity_a2a5e58b95ade525ca57d792b8e32ef7f}\label{classEntity_a2a5e58b95ade525ca57d792b8e32ef7f}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{position,  }\item[{std\+::vector$<$ double $>$}]{velocity,  }\item[{std\+::string}]{name = {\ttfamily \char`\"{}Unknown~\mbox{\hyperlink{classEntity}{Entity}}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Instantiation of an entity with a position, velocity and name. 
+
+\mbox{\Hypertarget{classEntity_adf6d3f7cb1b2ba029b6b048a395cc8ae}\label{classEntity_adf6d3f7cb1b2ba029b6b048a395cc8ae}} 
+\index{Entity@{Entity}!````~Entity@{$\sim$Entity}}
+\index{````~Entity@{$\sim$Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{$\sim$Entity()}{~Entity()}}
+{\footnotesize\ttfamily Entity\+::$\sim$\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntity}{Entity}} destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntity_a266591b5b25a3b297ee441f268338bf7}\label{classEntity_a266591b5b25a3b297ee441f268338bf7}} 
+\index{Entity@{Entity}!getEntityCount@{getEntityCount}}
+\index{getEntityCount@{getEntityCount}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getEntityCount()}{getEntityCount()}}
+{\footnotesize\ttfamily int Entity\+::get\+Entity\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the count of the entity. 
+
+\begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s count 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntity_a8c0279c56eee0a37bc905c79c5d15cfd}\label{classEntity_a8c0279c56eee0a37bc905c79c5d15cfd}} 
+\index{Entity@{Entity}!getID@{getID}}
+\index{getID@{getID}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int Entity\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the id of the entity. 
+
+\begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntity_a0de25bd3b1319c746127bcc06a5bd9f4}\label{classEntity_a0de25bd3b1319c746127bcc06a5bd9f4}} 
+\index{Entity@{Entity}!getLifeTime@{getLifeTime}}
+\index{getLifeTime@{getLifeTime}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getLifeTime()}{getLifeTime()}}
+{\footnotesize\ttfamily double Entity\+::get\+Life\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the lifetime of the entity. 
+
+\begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s lifetime 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntity_a403f69eb888da7c5a690b79c658cdf47}\label{classEntity_a403f69eb888da7c5a690b79c658cdf47}} 
+\index{Entity@{Entity}!getName@{getName}}
+\index{getName@{getName}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Entity\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the entity. 
+
+\begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntity_ae0534aee3b921618f0f71143706387a6}\label{classEntity_ae0534aee3b921618f0f71143706387a6}} 
+\index{Entity@{Entity}!report@{report}}
+\index{report@{report}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void Entity\+::report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints a general report on the entity. 
+
+\mbox{\Hypertarget{classEntity_a81b8c89e51b696e541643e8a63395178}\label{classEntity_a81b8c89e51b696e541643e8a63395178}} 
+\index{Entity@{Entity}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Entity\+::set\+Position (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{position }\end{DoxyParamCaption})}
+
+
+
+Sets the position of the entity. 
+
+\mbox{\Hypertarget{classEntity_afe92930d4e8ea8d591ecc55943247175}\label{classEntity_afe92930d4e8ea8d591ecc55943247175}} 
+\index{Entity@{Entity}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily void Entity\+::set\+Velocity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{velocity }\end{DoxyParamCaption})}
+
+
+
+Sets the velocity of the entity. 
+
+\mbox{\Hypertarget{classEntity_af4bdc01282300dffac86cae3d49d9e81}\label{classEntity_af4bdc01282300dffac86cae3d49d9e81}} 
+\index{Entity@{Entity}!update@{update}}
+\index{update@{update}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Entity\+::update (\begin{DoxyParamCaption}\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Updating the entity\textquotesingle{}s position. 
+
+\begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s updated position 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/forna032/3081\+\_\+f21/repo-\/forna032/labs/lab05\+\_\+doxygen/src/\mbox{\hyperlink{Entity_8h}{Entity.\+h}}\item 
+/home/forna032/3081\+\_\+f21/repo-\/forna032/labs/lab05\+\_\+doxygen/src/Entity.\+cc\end{DoxyCompactItemize}

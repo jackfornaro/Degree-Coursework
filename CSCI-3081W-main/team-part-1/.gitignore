@@ -1,0 +1,12 @@
+*.o
+*_app
+*.exe
+
+*.png
+*.o
+
+data
+/project/data/*
+
+/docs/html/*
+/docs/latex/*

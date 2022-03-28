@@ -1,0 +1,13 @@
+# 2 + 3 ;;
+- : int = 5
+#
+
+# let five = 2 + 3 ;;
+val five : int = 5
+# five ;;
+- : int = 5
+#
+
+# let plus x y = x + y ;;
+val plus
+

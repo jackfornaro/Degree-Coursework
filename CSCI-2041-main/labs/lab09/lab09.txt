@@ -1,0 +1,52 @@
+SOLUTIONS TO THE PROBLEMS IN LAB 9
+==================================
+
+Answer to Problem I
+-------------------
+1. for all n >= 0, sumup n gives us the sum of all integers from 0 to n.
+2. Base Case:
+     let n = 0
+     LHS:
+       sumup 0 returns 0
+     RHS:
+       0 is the sum of all integers from 0 to 0
+     P(0) holds
+   Induction step:
+     Let n = k
+     Assume sumup k-1 is the sum of all integers from 0 to k-1
+     LHS:
+       sumup k = k + sumup k-1
+       k + (k-1) + ... + 1
+     RHS:
+       k + (k-1) + ... + 1
+   LHS = RHS
+   sumup is proven correct by induction of natural numbers    
+
+Answer to Problem II
+--------------------
+Part 1:
+for all n >=0, sumup_aux n acc = n + (n-1) + ... + 1 + acc
+
+Answer to Problem III
+---------------------
+for all l of type (int list)
+  for all integer lists l
+    sumlist (reverse l) = sumlist l
+Base Case: (P([]))     
+  LHS:
+    sumlist (reverse []) -> sumlist [] -> 0
+  RHS:
+    sumlist [] -> 0
+  LHS = RHS so P([]) holds
+Induction Step:
+P(l') holds show P(x::l') holds
+  LHS:
+    sumlist (reverse (x :: l')) -> sumlist (l' :: x) -> x + sumlist l'
+  RHS:
+    sumlist (x :: l') -> x + sumlist l'
+  LHS = RHS so P(x :: l') holds
+
+Therefore, sumlist (reverse l) = sumlist l is proven by induction for an integer list
+
+Answer to Problem IV
+--------------------

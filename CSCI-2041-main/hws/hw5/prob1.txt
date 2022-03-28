@@ -1,0 +1,36 @@
+Solution to Problem 1
+=====================
+
+let fib n =
+  let rec fib_aux n m f s =
+    if (n = m) then f
+    else fib_aux n (m + 1) s (f + s)
+  in fib_aux n 1 1 1;;
+
+Solution to Part a
+------------------
+
+For l greater than or equal to 1, (fib_aux n m f s) evalulates to the lth
+Fibonnaci number
+
+Solution to Part b
+------------------
+
+Base case: Show P(n=0)
+fib_aux 0 1 1 1 = 0, obvious
+
+Inductive Step: P(n) holds, show P(n+1) holds
+let m f and s be arbitrary
+LHS:
+  (fib_aux (n+1) m f s) = (n+1) + n + (n-1) + ... + 0
+RHS:
+  nth Fibonnaci number = (n+1) + n + (n-1) + ... + 0
+LHS = RHS, so P(n+1) holds
+
+Solution to Part c
+------------------
+
+For l greater than or equal to l, (fib l) evaluates to the lth Fibonnaci Number
+
+fib_aux n m f s = fib n, therefore, (fib l) evaluates to the lth
+                                       Fibonnaci Number

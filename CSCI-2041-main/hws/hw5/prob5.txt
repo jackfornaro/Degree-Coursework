@@ -1,0 +1,57 @@
+type 'a btree =
+  | Empty
+  | Node of 'a * 'a btree * 'a btree;;
+
+let rec insert t i =
+  match t with
+  | Empty -> Node (i, Empty, Empty)
+  | Node (i', l, r) -> if (i < i') then Node (i', insert l i, r)
+                       else Node (i', l, insert r i);;
+
+let rec find t i =
+  match t with
+  | Empty -> false
+  | Node (i', l, r) -> if (i = i') then true
+                       else if (i < i') then find l i
+		       else find r i;;
+
+For all t of type ('a btree),
+  for all x of type 'a, for all t' of type ('a btree), for all y of type 'a.
+    if (insert t x) evaluates to t' and (find t' y) evaluates to true
+    then y = x or (find t y) evaluates to true.
+
+Base Case: P(Empty) holds
+Subcase 1:
+  (insert Empty x) = Node (x, Empty, Empty)
+  t' and (insert Empty x) are of type 'a btree
+Subcase 2:
+  (find (Node (x, Empty, Empty)) y) = true if and only if y = x
+**As stated previous, if the two subcases are true, y = x or (find t y) = true
+**Here, y can only be found if and only if y = x.  In this case, (find t y) is
+false because t is a Node with a single element x and Empty in the left and
+right branch.
+
+Inductive Step:
+Assume (insert t x) = t' with t being Node (i, t1, t2) and (find t' y) = true
+  Show this holds, and y = x or (find t y) = true
+Subcase 1: (x < i)
+  Assume Node (i, insert t1 x, t2) = t and (find t' y) = true
+  1. When y < i
+       (find (insert t1 x) y) = true when P(t1) holds true, which means either
+       (x = y) = true or (find t' y) = true
+  2. When y = i
+        Obvious that (find t y) will always evaluate to true, because y is
+	alwayys in the same location as i, showing that (find t y) = true
+  3. When i < y
+       Assume (find t' y) = true which means x = y.  This means y is always
+       in t, meaning (find t' y) = true
+
+Subcase 2: (x >= i)
+  Assume Node (i, t1, insert t2 x) = t and (find t' y) = true
+  Without loss of generality
+  1. When y < i
+       (find y (insert t2 x)) = true
+  2. When y = i
+       Obvious, (find y t) will always evaluate to true
+  3. When y > i
+       Assume (find y t') = true means x = y, meaning (find y t') = true

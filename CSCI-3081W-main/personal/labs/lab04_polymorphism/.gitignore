@@ -1,0 +1,4 @@
+*.o
+*_app
+output.png
+data

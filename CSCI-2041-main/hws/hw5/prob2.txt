@@ -1,0 +1,40 @@
+Solution to Problem 2
+=====================
+type nat = Zero | Succ of nat
+
+let rec plusNat x y =
+  match x with
+  | Zero -> y
+  | (Succ x') -> Succ (plusNat x' y)
+
+let rec multNat x y =
+  match x with
+  | Zero -> Zero
+  | (Succ x') -> plustNat y (multNat x' y)
+
+let rec toInt n =
+  match n with
+  | Zero -> 0
+  | (Succ n') -> toInt n' + 1
+
+To Prove:
+  for all n1 of type nat,
+    for all n2 of type nat,
+      toInt (multNat n1 n2) = (toInt n1) * (toInt n2)
+
+Base Case: P(Zero) holds
+let n2 be arbitrary
+LHS:
+  toInt (multNat Zero n2) = Zero
+RHS:
+  (toInt Zero) * (toInt n2) = Zero * (toInt n2) = Zero
+LHS = RHS, so P(Zero) holds
+
+Inductive Step: P(n1') holds, show P(Succ n1') holds
+let n2 be arbitrary
+LHS: 
+  toInt (multNat (Succ n1') n2) = toInt (Succ (multNat n1' n2))
+    = 1 + toInt (multNat n1' n2) = 1 + toInt n1' * toInt n2
+RHS:
+  (toInt (Succ n1')) * (toInt n2) = 1 + toInt n1' * toInt n2
+LHS = RHS, so P(Succ n1') holds
